@@ -1,0 +1,37 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/personal_expense_assistant?useSSL=false&amp;serverTimezone=UCT</property>
+        <property name="connection.username">administrator</property>
+        <property name="connection.password">administrator</property>
+
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- mappings for annotated classes -->
+        <mapping class="com.eftech.pa.pea.impl.persistent.Category"/>
+        <mapping class="com.eftech.pa.pea.impl.persistent.CreditCard"/>
+        <mapping class="com.eftech.pa.pea.impl.persistent.PaymentOption"/>
+        <mapping class="com.eftech.pa.pea.impl.persistent.RewardCalendar"/>
+        <mapping class="com.eftech.pa.pea.impl.persistent.Transaction"/>
+        <mapping class="com.eftech.pa.pea.impl.persistent.User"/>
+
+    </session-factory>
+
+</hibernate-configuration>
