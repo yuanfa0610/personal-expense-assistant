@@ -7,6 +7,7 @@ import com.eftech.pa.pea.impl.persistent.*;
 import com.eftech.pa.pea.utils.Generator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.math.BigDecimal;
 import java.text.DateFormat;
@@ -15,6 +16,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 @SpringBootApplication
+@EnableSwagger2
 public class PeaApplication {
 
 	public static void main(String[] args) {
